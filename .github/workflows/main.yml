@@ -26,10 +26,12 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Check
+      - name: Check for python3
         run: which python3
 
       # Runs a set of commands using the runners shell
-      - name: Run
-        run: python rework.py
-
+      - name: Enter venv
+        run: ./venv/scripts/activate
+        
+      - name: Run bot
+        run: python3 rework.py
