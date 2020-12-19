@@ -31,7 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Enter venv
-        run: ./venv/scripts/activate
+        run: venv/scripts/activate
         
       - name: Run bot
         run: python3 rework.py
